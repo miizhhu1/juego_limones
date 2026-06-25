@@ -20,9 +20,16 @@ function dibujarPersonaje(){
     ctx.fillStyle="pink";
     ctx.fillRect(personajeX,canvas.height-(ALTURA_SUELO+ALTURA_PERSONAJE),ANCHO_PERSONAJE,ALTURA_PERSONAJE);
 }
-
+function moverDerecha(){
+    personajeX=personajeX+10;
+    actualizarPantalla();
+}
 function moverIzquierda(){
     personajeX=personajeX-10;
+    actualizarPantalla();
+    
+}
+function actualizarPantalla(){
     limpiarCanva();
     dibujarSuelo();
     dibujarPersonaje();
